@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const middlewares = require('./middlewares')
 const mustacheExpress = require('mustache-express')
 const path = require('path')
+var mainRouter = require('./routes')
 
 const app = express()
 
@@ -16,15 +17,9 @@ app.use(bodyParser.urlencoded({extended:false}))
 
 app.use(express.static(path.join(__dirname, '/public')))
 
-app.get('/', (req, res, next) => {
-	const data = {
+// app.use(middlewares)
 
-	}
-
-	res.render('invite', data)
-})
-
-app.use(middlewares)
+app.use(mainRouter)
 
 
 

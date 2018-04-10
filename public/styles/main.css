@@ -44,8 +44,9 @@ img {
 
 button {
 	height: 30px;
-	border:none;
+	border:1px solid grey;
 	outline:none;
+	border-radius: 25px;
 }
 
 .isGoing {
