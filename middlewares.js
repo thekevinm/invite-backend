@@ -12,7 +12,7 @@ mw.get("/", (req, res, next) => {
 })
 
 mw.use((req, res, next) => {
-	res.end()
+	
 })
 
 module.exports = mw

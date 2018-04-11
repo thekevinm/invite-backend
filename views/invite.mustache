@@ -9,23 +9,38 @@
 
 <div class="inviteContainer">	
 	<div class="linkContainer">
-		<p>Going</p>
-		<p>Not Going</p>
+		<a href="/going"><p>Going: {{countGoing}}</p></a>
+		<a href="/notgoing"><p>Not Going: {{countDeclined}}</p></a>
 	</div>
-
+	{{>profile}}
+	<form action="/going" method="post">
 	<div class="userImg">
-		<img src="http://placehold.it/100/100" />
+		<input type="hidden" name="picture" value={{picture}} />
 	</div>
 
 	<div class="userInfo">
-		<h3>Name:</h3><p>dummy data</p>
-		<h3>Phone:</h3><p>dummy data</p>
-		<h3>Email:</h3><p>dummy data</p>
+		<h3>Name:</h3><input type="hidden" name="name" value={{name}} />
+		<h3>Phone:</h3><input type="hidden" name="phone" value={{cell}} />
+		<h3>Email:</h3><input type="hidden" name="email" value={{email}} />
 	</div>
 
 	<div class="buttonStuff">
-		<button class="not" type="submit">Not Going</button>
 		<button class="isGoing" type="submit">Going</button>
+	</div>
+	</form>
+	<form action="/notgoing" method="post">
+	<div class="userImg">
+		<input type="hidden" name="picture" value={{picture}} />
+	</div>
+
+	<div class="userInfo">
+		<h3>Name:</h3><input type="hidden" name="name" value={{name}} />
+		<h3>Phone:</h3><input type="hidden" name="phone" value={{cell}} />
+		<h3>Email:</h3><input type="hidden" name="email" value={{email}} />
+	</div>
+
+	<div class="badButton">
+		<button class="not" type="submit">Not Going</button>
 	</div>
 <div>
 
