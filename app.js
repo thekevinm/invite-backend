@@ -9,9 +9,9 @@ const request = require('request')
 
 const app = express()
 
-let db = {
-	accepted: [],
-	declined: []
+const people = {
+	going: [],
+	notgoing: []
 }
 
 app.engine('mustache', mustacheExpress())
@@ -29,11 +29,11 @@ app.get('/', (req, res, next) => {
 		const body = JSON.parse(resp.body)
 		const data = {
 			picture: body.results[0].picture.large,
-			name: body.results[0].name.first + body.results[0].name.last,
+			name: body.results[0].name.first + " " + body.results[0].name.last,
 			email: body.results[0].email,
 			cell: body.results[0].cell,
-			countGoing: db.accepted.length || '0',
-			countDeclined: db.declined.length || '0',
+			going: people.going.length,
+			notgoing: people.notgoing.length
 		}
 		res.render('invite', data)
 	})
