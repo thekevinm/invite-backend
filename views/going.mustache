@@ -7,21 +7,19 @@
 </head>
 <body>
 
+<a href="/">Back</a>
 <div class="inviteContainer">	
-	<div class="linkContainer">
-		<p>Home</p>
-		<p>Not Going</p>
-	</div>
-
+	{{#going}}
 	<div class="userImg">
-		<img src="http://placehold.it/100/100" />
+		<img src={{picture}} />
 	</div>
 
 	<div class="userInfo">
-		<h3>Name:</h3><p>dummy data</p>
-		<h3>Phone:</h3><p>dummy data</p>
-		<h3>Email:</h3><p>dummy data</p>
+		<h3>Name:</h3><p>{{name}}</p>
+		<h3>Phone:</h3><p>{{cell}}</p>
+		<h3>Email:</h3><p>{{email}}</p>
 	</div>
+	{{/going}}
 <div>
 
 </body>

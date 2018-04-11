@@ -39,20 +39,23 @@ app.get('/', (req, res, next) => {
 	})
 })
 
-// app.get('/', (req, res, next) => {
-// 	const data = {
+app.get('/going', (req, res, next) => {
+	res.render('going', people)
+})
 
-// 	}
+app.get('/notgoing', (req, res, next) => {
+	res.render('notgoing', people)
+})
 
-// 	// res.render('invite', data)
-// 	// res.render('going', data)
-// })
+app.post('/going', (req, res, next) => {
+	people.going.push(req.body)
+	res.redirect('/')
+})
 
-// app.use(middlewares)
-
-// app.use(mainRouter)
-
-
+app.post('/notgoing', (req, res, next) => {
+	people.notgoing.push(req.body)
+	res.redirect('/')
+})
 
 app.listen(3000, () => {
 	console.log("Listening on 3000")
