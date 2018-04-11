@@ -1,0 +1,78 @@
+.inviteContainer {
+	border: 1px solid silver;
+	background-color:rgb(238, 238, 238);
+	display: flex;
+	margin:auto;
+	flex-direction: column;
+	width: 300px;
+}
+
+.linkContainer {
+	border: 1px solid silver;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.userImg {
+	border:1px solid silver;
+	display: flex;
+	justify-content: center;
+	height: 150px;
+	padding-top: 15px;
+}
+
+img {
+	border-radius:50%;
+	width: 100px;
+	height: 100px;
+}
+
+.userInfo {
+	border:1px solid silver;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 25px;
+}
+
+.buttonStuff {
+	border-bottom:1px solid silver;
+	border-left:2px solid silver;
+	border-right:2px solid silver;
+	display: flex;
+	justify-content: space-evenly;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: rgb(238, 238, 238);
+	width: 398px;
+	margin:auto;
+}
+
+.badButton {
+	border-top:1px solid silver;
+	border-bottom:2px solid silver;
+	border-left:2px solid silver;
+	border-right:2px solid silver;
+	display: flex;
+	justify-content: space-evenly;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: rgb(238, 238, 238);
+	width: 398px;
+	margin:auto;
+}
+
+button {
+	height: 30px;
+	border:1px solid grey;
+	outline:none;
+	border-radius: 25px;
+}
+
+.isGoing {
+	background-color: limegreen;
+}
+
+.not {
+	background-color: red;
+}
